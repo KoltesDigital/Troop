@@ -54,6 +54,14 @@ You will be asked to enter a password. You can leave this blank if you wish - bu
 
 **Warning:** Code executed by one client is executed on every client, so be careful when using public networks as you will then be susceptible to having malicious code run on your machine. Avoid using public networks and only give your server password to people you trust.
 
+#### Docker (advanced users)
+
+For now, you have to build a Docker image at the root directory. Then you can make a container directly, via docker-compose, etc.
+
+	cd Troop
+	docker build -t troop .
+	docker run -p 57890:57890 troop -P password
+
 ### Running the Troop Client
 
 Once you've opened the Troop client you'll be able to enter the IP address and port number of the Troop server instance running on your network. Enter the name you want to display and the password for the server and select the interpreter you want to use (requires installation and setup - see below). Press OK to open the editor. You can also change the interpreter to use with Troop after you've opened the editor by going to `Code -> Choose Language` and selecting the language of choice.
